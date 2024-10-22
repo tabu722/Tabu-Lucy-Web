@@ -13,6 +13,7 @@ html {
 
 body {
 	font-size: 1.6rem;
+	background: #fffaf5;
 }
 
 text,
@@ -53,7 +54,9 @@ a {
 	--height: 56px;
 
 	min-width: 130px;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	border-radius: 99px;
 	border: 1px solid var(--primary-color);
 	line-height: var(--height);
@@ -64,6 +67,27 @@ a {
 	text-align: center;
 }
 
+.btn:hover {
+	cursor: pointer;
+}
+
+.btn--primary {
+	color: #fff;
+	background-color: #ff5b2e;
+	border-color: #ff5b2e;
+}
+
+.btn__arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 10px;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
 h1,
 h2,
 h3,
@@ -72,6 +96,19 @@ h5 {
 	font-family: "Sora", sans-serif;
 }
 
+.section-heading {
+	color: #000958;
+	font-size: 5.2rem;
+	font-weight: 700;
+	line-height: 1.19;
+}
+
+.section-desc {
+	color: #656689;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.87;
+}
 /* Header */
 .header {
 	background: #fffaf5;
@@ -126,65 +163,86 @@ h5 {
 
 /* Hero */
 .hero {
-	background: #fffaf5;
 	padding: 74px 0 94px;
 }
 
 .hero__row {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 120px;
 }
 
 .hero__image {
 	position: relative;
-	width: 42.3%;
+	display: flex;
+	padding-bottom: 94px;
 }
 
-.hero__img-1 {
+.hero__img-wrap {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 	width: 388px;
 	height: 488px;
-	object-fit: cover;
+	border: 3px solid #fff;
 	border-radius: 16px;
 	background: #fe997b;
 }
 
-.hero__img-2 {
-	position: absolute;
-	bottom: 0;
-	right: -56px;
+.hero__img-wrap-small {
+	align-self: flex-end;
+	margin: 0 0 -58px -24px;
 	width: 186px;
 	height: 244px;
-	border-radius: 16px;
 	background: #faa7ad;
-	object-fit: cover;
-	border: 2px solid #fff;
+	border-color: #fde0e2;
+}
+
+.hero__img-1 {
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: inherit;
+}
+
+.hero__img-2 {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .hero__icon-1 {
 	position: absolute;
-	top: 0;
-	right: 56px;
+	top: 16px;
+	right: -42px;
+	z-index: -1;
 }
 
 .hero__icon-2 {
 	position: absolute;
-	left: -80px;
-	bottom: 12px;
+	left: -58px;
+	bottom: 10px;
+	z-index: -1;
 }
 
 .hero-box {
-	position: absolute;
-	bottom: -55px;
-	right: 105px;
 	width: 250px;
+	height: 156px;
+	padding: 18px 14px;
+	position: absolute;
+	bottom: 0;
+	left: 129px;
 	border-radius: 10px;
-	padding: 20px 14px;
 	background: #fff;
 	box-shadow: -17px 14px 68px -4px rgba(207, 174, 132, 0.25);
 }
 
 .hero-box__row {
 	display: flex;
-	align-items: center;
+}
+
+.hero-box-list {
+	margin-left: 10px;
 }
 
 .hero-box__img-1,
@@ -208,40 +266,74 @@ h5 {
 }
 
 .hero-box__name {
-	height: 40px;
-	position: relative;
 	color: #181e52;
-	font-family: Sora;
+	font-family: Sora, sans-serif;
 	font-size: 1.4rem;
 	font-weight: 600;
 	line-height: 1;
-	margin-left: 9px;
 }
 
-.hero-box__name::before,
-.hero-box__name::after {
-	content: "";
-	display: inline-block;
-	border: 2px solid var(--primary-color);
-	border-radius: 99px;
+.hero-box__skeleton {
+	margin-top: 6px;
+	width: var(--width, 118px);
+	height: 4px;
+	border-radius: 10px;
 	opacity: 0.08;
+	background: #000958;
 }
 
-.hero-box__name::before {
-	position: absolute;
-	top: 20px;
-	width: 118px;
-}
-
-.hero-box__name::after {
-	position: absolute;
-	top: 34px;
-	left: 0;
-	width: 40px;
-}
-
-.separated {
+.hero-separated {
 	margin: 20px 0;
-	width: 222px;
-	border: 1px solid #f2f2f2;
+	width: 100%;
+	height: 2px;
+	background-color: #f2f2f2;
+	border-radius: 99px;
+}
+
+.hero__content {
+}
+
+.hero__heading {
+	margin-bottom: 24px;
+	width: 517px;
+	font-size: 6.6rem;
+	font-weight: 800;
+	line-height: 1.25;
+}
+
+.hero__desc {
+	width: 391px;
+}
+
+.hero-btn__row {
+	display: flex;
+	align-items: center;
+	margin-top: 38px;
+}
+
+.hero-btn {
+	--height: 60px;
+
+	line-height: var(--height);
+	width: 189px;
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 600;
+	transition: box-shadow 0.5s;
+}
+
+.hero-btn:hover {
+	box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.5);
+}
+
+.btn-call {
+	margin-left: 24px;
+	color: #000958;
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 1;
+}
+
+.btn-call:hover {
+	text-decoration: underline;
 }
