@@ -163,7 +163,7 @@ h5 {
 
 /* Hero */
 .hero {
-	padding: 74px 0 94px;
+	padding-top: 74px;
 }
 
 .hero__row {
@@ -336,4 +336,138 @@ h5 {
 
 .btn-call:hover {
 	text-decoration: underline;
+}
+
+/* About */
+.about {
+	margin-top: 77px;
+	padding: 53px 0;
+}
+
+.about__inner {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+
+.about__media {
+	position: relative;
+}
+
+.about__others {
+	color: #5e6085;
+	font-family: Sora, sans-serif;
+	font-size: 1.6rem;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.about__heading {
+	margin-top: 15px;
+	width: 446px;
+}
+
+.about__desc {
+	margin-top: 24px;
+	width: 431px;
+}
+
+.about__checklist {
+	margin-top: 54px;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 36px 34px;
+	justify-content: flex-start;
+}
+
+.about__check-item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	color: #48496a;
+	font-size: 1.8rem;
+	font-weight: 500;
+	line-height: 1;
+}
+
+.about__check-item::before {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border-radius: 4px;
+	background-color: #ff5d31;
+	box-shadow: 0px 4px 15px -3px rgba(255, 93, 49, 0.69);
+}
+
+.about__check-item::after {
+	position: absolute;
+	top: 2px;
+	left: 4px;
+	content: url(./img/Vector.svg);
+}
+
+.about__card {
+	position: absolute;
+	top: 165px;
+	left: 0;
+	width: 136px;
+	padding: 30px 26px;
+	border-radius: 10px;
+	background: #5bd6e2;
+	box-shadow: -15px 26px 48px 0px rgba(85, 240, 255, 0.17);
+	text-align: center;
+}
+
+.about__card-title {
+	color: #fff;
+	font-family: Sora, sans-serif;
+	font-size: 4.2rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.about__card-desc {
+	margin-top: 14px;
+	color: #c6f4f9;
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1.42;
+}
+
+.about__card-icon {
+	position: absolute;
+	top: -40px;
+	right: -30px;
+}
+
+.about__image {
+	width: 494px;
+	position: relative;
+	margin-left: auto;
+}
+
+.about__image::after {
+	height: 336px;
+	z-index: -1;
+	position: absolute;
+	inset: auto 0 0 0;
+	content: "";
+	display: inline-block;
+	border-radius: 16px;
+	background: linear-gradient(180deg, #fce0ef 0%, #fac3d1 100%);
+}
+
+.about__img {
+	width: 450px;
+	display: block;
+	margin: 0 auto;
+}
+
+.about__icon {
+	z-index: -1;
+	position: absolute;
+	top: 157px;
+	right: 0;
 }
