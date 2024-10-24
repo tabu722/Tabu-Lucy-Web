@@ -587,6 +587,7 @@ h5 {
 }
 
 .about__link {
+    color: #656689;
     display: inline-block;
     margin-top: 32px;
     font-size: 1.6rem;
