@@ -1030,7 +1030,7 @@ h5 {
 .review__inner {
     display: flex;
     align-items: center;
-    column-gap: 44px;
+    column-gap: 70px;
 }
 
 .review__control {
@@ -1051,6 +1051,7 @@ h5 {
     background: #ff5b2e;
     color: #fff;
     border-color: #ff5b2e;
+    box-shadow: 0px 5px 27px 0px rgba(255, 91, 46, 0.3);
 }
 
 .review-item {
@@ -1138,4 +1139,220 @@ h5 {
     width: 24px;
     background: #ff5b2e;
     border-radius: 99px;
+}
+
+/* Blog */
+.blog {
+    margin-top: 77px;
+}
+
+.blog__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog__desc {
+    width: 350px;
+}
+
+.blog__right {
+    margin-right: 93px;
+}
+
+.blog__btn {
+    min-width: 182px;
+    margin-top: 24px;
+    color: #ff5b2e;
+    border: 1px solid #ff5b2e99;
+    transition: all 0.25s;
+}
+
+.blog__btn:hover {
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+
+.blog__list {
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 48px;
+}
+
+.blog-items__media {
+    position: relative;
+    padding: 24px 36px 0;
+    border-radius: 24px;
+    background: #90ccff;
+    height: 362px;
+}
+
+.blog-items:nth-child(2) > .blog-items__media {
+    background: #ff997e;
+}
+
+.blog-items:nth-child(3) > .blog-items__media {
+    background: #5bd6e2;
+}
+
+.blog-items__date {
+    color: #fff;
+    font-family: Sora, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.21;
+}
+
+.blog-items__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 322px;
+}
+
+.blog-items__body {
+    padding-top: 28px;
+}
+
+.blog-items__heading {
+    width: 338px;
+    color: #000958;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.54;
+}
+
+.blog-items__desc {
+    margin-top: 16px;
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.71;
+}
+
+/* Footer */
+.footer {
+    margin-top: 130px;
+    background: linear-gradient(to right, #fff6ed 43%, transparent 42%);
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__form {
+    width: 42%;
+    padding: 114px 0 148px;
+}
+
+.footer__logo {
+    justify-content: flex-start;
+}
+
+.footer__sign {
+    position: relative;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.footer__email {
+    min-width: 268px;
+    padding: 11px 10px;
+    outline: none;
+    border-radius: 23px;
+    border: 1px solid rgba(255, 91, 46, 0.25);
+}
+.footer__email::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #656689;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.16;
+    opacity: 0.8;
+}
+
+.footer__submit {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff5b2e;
+    width: 45px;
+    height: 46px;
+    border-radius: 50%;
+    border-color: #ff5b2e;
+    outline: #ff5b2e;
+    border: none;
+}
+
+.footer-social {
+    margin-top: 68px;
+}
+
+.footer-social__follow {
+    color: #000958;
+    font-family: Sora, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.11;
+}
+
+.footer-social__list {
+    margin-top: 16px;
+    display: flex;
+    column-gap: 16px;
+}
+
+.footer-social__list > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.footer__content {
+    padding: 52px 0 48px 0;
+    flex: 1;
+}
+
+.footer__info {
+    margin-left: 129px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 58px 137px;
+}
+
+.footer-info__title {
+    margin-bottom: 14px;
+    color: #000958;
+    font-family: Sora, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.11;
+}
+
+.footer-item__link {
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.footer__copyright {
+    color: #656689;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.16;
+    margin: 52px 0 0 22px;
+    opacity: 0.5;
 }
